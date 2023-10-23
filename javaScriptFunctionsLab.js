@@ -26,7 +26,7 @@ largest of them. Again, the Math.max method is not allowed. */
 
 // console.log(maxOfThreeNumbers(Math.floor(Math.random() * 100),Math.floor(Math.random() * 100),Math.floor(Math.random() * 100)))
 
-/* 3. Define a function, as a function declaration, 
+/* 3. Define a function, as a function declaration,
 isCharAVowel that takes a character as an argument and returns
 true if it is a vowel, false otherwise. */
 
@@ -42,38 +42,41 @@ true if it is a vowel, false otherwise. */
 
 // console.log(isCharAVowel ('aeiu'))
 
-/* 4. Define a function, as a function expression, sumArray that 
+/* 4. Define a function, as a function expression, sumArray that
 takes an array of numbers and returns the sum
 of those numbers. For example, sumArray([2, 4, 5]);would return 11. */
 
-const sumArray = (x) => {
+const sumArray = (arrayX) => {
     let sum = 0
-    return Array.isArray(x) ? x.forEach((element) => {
-        sum += element
-        return sum
-    })
-    : 'Enter a valid numeric array'
+        if(Array.isArray(arrayX)) {
+            arrayX.forEach((element) => {
+                sum += element
+                return sum
+            })
+        }  
+        else
+            'Enter a valid numeric array'
 }
 
 console.log(sumArray([34, 98, 54, 87, 89, 44, 66, 42]))
 
-/* 5. Define a function, as a function declaration, multiplyArray that 
+/* 5. Define a function, as a function declaration, multiplyArray that
 takes an array of numbers and returns the
-product those numbers. For example, multiplyArray([2, 4, 5]);would return 
+product those numbers. For example, multiplyArray([2, 4, 5]);would return
 40. */
 
-function multiplyArray(arrayX) {
-    let product = 1
-    if (Array.isArray(arrayX)) {
-        arrayX.forEach((element) => {
-            product *= element
-            return product
-        })
-    } else
-    return 'Enter valid array input'
-}
+// function multiplyArray(arrayX) {
+//     let product = 1
+//     if (Array.isArray(arrayX)) {
+//         arrayX.forEach((element) => {
+//             product *= element
+//             return product
+//         })
+//     } else
+//     return 'Enter valid array input'
+// }
 
-console.log(multiplyArray([34, 98, 54, 87, 89, 44, 66, 42]))
+// console.log(multiplyArray([34, 98, 54, 87, 89, 44, 66, 42]))
 
 /* 6. Define a function, as a function expression, numArgs that returns the number of arguments
 passed to the function when called. */
@@ -95,13 +98,13 @@ and a number as arguments; and returns an array of the strings that are longer t
 passed in. For example, stringsLongerThan(['say', 'hello', 'in', 'the', 'morning'], 3);would
 return ["hello", "morning"]. */
 
-function stringsLongerThan (arrayX, x) {
-    let newArrayResult
-    for (let element of arrayX) {
-        if (arrayX[element].length > x)
-            newArrayResult.unshift(element)
-    }
-    return newArrayResult
-}
+// function stringsLongerThan (arrayX, x) {
+//     let newArrayResult
+//     for (let element of arrayX) {
+//         if (arrayX[element].length > x)
+//             newArrayResult.unshift(element)
+//     }
+//     return newArrayResult
+// }
 
-console.log(stringsLongerThan(['function', 'declaration', 'and', 'function', 'expression', 'are', 'really', 'stretching', 'my', 'brain'], 6))
+// console.log(stringsLongerThan(['function', 'declaration', 'and', 'function', 'expression', 'are', 'really', 'stretching', 'my', 'brain'], 6))
